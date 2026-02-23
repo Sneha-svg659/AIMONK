@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# optional (ONLY if you don't want model on GitHub)
+# *.pth
