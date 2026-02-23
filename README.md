@@ -1,11 +1,23 @@
 # Multilabel Image Classification – Aimonk Assignment
+##  Problem Statement
+
+- Input: Images + `labels.txt`
+- Output: Predict 4 attributes per image
+- Challenges:
+  - Missing labels (`NA`)
+  - Class imbalance
+  - Multilabel setup (not multiclass)
 
 ## Framework
 The implementation is done in PyTorch.
 
-## Model
-A ResNet50 pretrained on ImageNet was used. The final fully connected layer was replaced with a 4-unit output layer for multilabel classification.
+##  Model
 
+- Architecture: **ResNet50**
+- Pretraining: **ImageNet**
+- Transfer Learning: Fine-tuned final layer
+- Output layer: 4 neurons (one per attribute)
+  
 ## Transfer Learning
 The network was initialized with pretrained weights and fine-tuned for the target dataset.
 
@@ -23,9 +35,9 @@ Normalization using ImageNet statistics
 Random horizontal flip
 
 ## Training Details
-Optimizer: Adam
-Loss: Masked BCEWithLogitsLoss
-Epochs: 15
+-Optimizer: Adam
+-Loss: Masked BCEWithLogitsLoss
+-Epochs: 15
 
 ## Outputs
 -Trained model weights (.pth)
